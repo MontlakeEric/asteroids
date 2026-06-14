@@ -1,6 +1,5 @@
-# Ideas for additions, suggested by the class
+# Their Ideas for Additions
 
-- Add a scoring system
 - Implement multiple lives and respawning
 - Add an explosion effect for the asteroids
 - Add acceleration to the player movement
@@ -13,7 +12,11 @@
 - Add a speed power-up
 - Add bombs that can be dropped
 
-# Additions Implemented
+# Their Ideas Implemented
+
+- add a scoring system
+
+# My Own Additions Implemented
 
 - random color to asteroids, keeping as they are hit
 - get rid of memory leak for asteroids and shots, killing them once off the screen
