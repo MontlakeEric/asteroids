@@ -2,12 +2,13 @@ import pygame
 import random
 from logger import log_event
 from circleshape import CircleShape
-from constants import LINE_WIDTH, ASTEROID_MIN_RADIUS, SCREEN_WIDTH, SCREEN_HEIGHT, ASTEROID_MAX_RADIUS
+from constants import LINE_WIDTH, ASTEROID_MIN_RADIUS, SCREEN_WIDTH, SCREEN_HEIGHT, ASTEROID_MAX_RADIUS, ASTEROID_MAX_SCORE, ASTEROID_MIN_SCORE
 
 class Asteroid(CircleShape):
     def __init__(self, x: float, y: float, radius: float) -> None:
         super().__init__(x, y, radius)
         self.color = (random.randint(80, 255), random.randint(80, 255), random.randint(80, 255))
+        self.score = ASTEROID_MAX_SCORE - ((int(self.radius / ASTEROID_MIN_RADIUS) - 1) * ASTEROID_MIN_SCORE)
 
     def draw(self, screen: pygame.Surface) -> None:
         pygame.draw.circle(screen, self.color, self.position, self.radius, LINE_WIDTH)
