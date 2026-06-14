@@ -11,3 +11,4 @@ wheels/
 
 # Runtime-generated files
 game_state.jsonl
+game_events.jsonl
